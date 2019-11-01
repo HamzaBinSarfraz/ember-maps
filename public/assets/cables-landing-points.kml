@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+	
+
+	<name>Pop Sites</name>
+		
+	
+	<Style id="Oman-Node">
+		<IconStyle>        
+			<Icon>
+				<href>http://omaps.neomeric.us/images/circle-o.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	
+	<Style id="Oman-Node-Blk">
+		<IconStyle>        
+			<Icon>
+				<href>http://omaps.neomeric.us/images/circle-b.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+			
+		<Placemark>
+			<name>Muscat, Oman</name>
+			<snippet></snippet>
+			<description><![CDATA[<div class="googft-info-window">
+<b>id:</b> muscat-oman<br>
+<b>city_id:</b> 4225<br>
+<b>name:</b> Muscat, Oman<br>
+<b>marker:</b> measle_white<br>
+<b>cable_id:</b> 1031
+</div>]]></description>
+			<styleUrl>#Oman-Node</styleUrl>
+			<ExtendedData>
+				<Data name='id'>
+					<value>muscat-oman</value>
+				</Data>
+				<Data name='city_id'>
+					<value>4225</value>
+				</Data>
+				<Data name='marker'>
+					<value>measle_white</value>
+				</Data>
+				<Data name='cable_id'>
+					<value>1031</value>
+				</Data>
+			</ExtendedData><Point><coordinates>58.591043,23.615098</coordinates></Point>
+		</Placemark>
+		
+
+			
+	</Document>
+</kml>
+		

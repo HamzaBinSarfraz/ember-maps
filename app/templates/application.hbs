@@ -1,0 +1,237 @@
+
+<section class="topbar-section">
+	<div class="container topbar-container">
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+				<h3 class="label1">Show:</h3>
+
+				<p class="sd-ckhbx pop-btn pb2">
+					<img src="assets/images/pop-icon.png" class="btn-icn" alt="image">
+					<input id="pop" type="checkbox" name="shapes" value="pop" checked>
+					
+					<label class="chkbx_label" for="pop">POP Locations</label>
+				</p>
+
+				<p class="sd-ckhbx pop-btn">
+					<img src="assets/images/cls-icon-wh.png" class="btn-icn" alt="image">
+					<input id="cli" type="checkbox" name="shapes" value="cli" checked>					
+					<label class="chkbx_label" for="cli">CLS Locations</label>
+				</p>
+
+				<button type="button" class="btn gray-btn cbl-btn showCables" data-toggle="modal" data-target="#OmanData">Cables List</button>
+
+
+			</div>
+
+			<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+				<div id="nav" class="ui-widget">
+					<input id="search" name="frm-input" placeholder="Cable Search">
+				</div>
+				<div id="content">{{outlet}}</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-r">
+
+				<img src="assets/images/reload-icon.png" alt="image" class="relod-icn">
+
+			</div>
+		</div> 
+	</div>
+</section>
+
+
+	
+
+	{{ map-container }}
+
+	<section class="gmap-section-wrap"></section>
+
+
+{{! ------ Modal ----- }}
+
+<div id="OmanData" class="modal fade od" role="dialog">
+	<div class="modal-dialog">
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close od" data-dismiss="modal"><i class="fa fa-times"></i></button>
+				<h4 class="modal-title">Oman Cables</h4>
+			</div>
+			<div class="modal-body">
+
+				<div class="cables-list" id="modal-popup">
+					<ul class="features aa block">
+						<li>
+							<div class="line cbl-1"></div>
+							<a href="#/submarine-cable/silk-route-gateway-srg-1" id="ember276" class="ember-view">Silk
+								Route Gateway
+								(SRG-1)</a>
+						</li>						
+						<li>
+							<div class="line cbl-2"></div>
+							<a href="#/submarine-cable/seamewe-3" id="ember284" class="ember-view">SeaMeWe-3</a>
+						</li>
+						<li>
+							<div class="line cbl-3"></div>
+							<a href="#/submarine-cable/asia-africa-europe-1-aae-1" id="ember280" class="ember-view">Asia
+								Africa
+								Europe-1 (AAE-1)</a>
+						</li>
+						<li>
+							<div class="line cbl-4"></div>
+							<a href="#/submarine-cable/omranepeg-cable-system" id="ember282"
+								class="ember-view">OMRAN/EPEG Cable
+								System</a>
+						</li>
+						<li>
+							<div class="line cbl-5"></div>
+							<a href="#/submarine-cable/falcon" id="ember286" class="ember-view">FALCON</a>
+						</li>
+						<li>
+							<div class="line cbl-6"></div>
+							<a href="#/submarine-cable/gulf2africa-g2a" id="ember278" class="ember-view">Gulf2Africa
+								(G2A)</a>
+						</li>						
+						<li>
+							<div class="line cbl-7"></div>
+							<a href="#/submarine-cable/seamewe-5" id="ember300" class="ember-view">SeaMeWe-5</a>
+						</li>
+						<li>
+							<div class="line cbl-8"></div>
+							<a href="#/submarine-cable/tata-tgn-gulf" id="ember302" class="ember-view">Tata TGN-Gulf</a>
+						</li>
+						<li>
+							<div class="line cbl-9"></div>
+							<a href="#/submarine-cable/transworld-tw1" id="ember288" class="ember-view">Transworld
+								(TW1)</a>
+						</li>
+						<li>
+							<div class="line cbl-10"></div>
+							<a href="#/submarine-cable/bay-of-bengal-gateway-bbg" id="ember290" class="ember-view">Bay
+								of Bengal
+								Gateway (BBG)</a>
+						</li>
+						<li>
+							<div class="line cbl-11"></div>
+							<a href="#/submarine-cable/pishgaman-oman-iran-poi-network" id="ember292"
+								class="ember-view">Pishgaman
+								Oman Iran (POI) Network</a>
+						</li>
+						<li>
+							<div class="line cbl-12"></div>
+							<a href="#/submarine-cable/europe-india-gateway-eig" id="ember294" class="ember-view">Europe
+								India Gateway
+								(EIG)</a>
+						</li>
+						<li>
+							<div class="line cbl-13"></div>
+							<a href="#/submarine-cable/gulf-bridge-international-cable-system-gbicsmiddle-east-north-africa-mena-cable-system"
+								id="ember298" class="ember-view">Gulf Bridge International Cable System (GBICS)/Middle East North Africa (MENA) Cable System</a>
+						</li>
+						<li>
+							<div class="line cbl-14"></div>
+							<a href="#/submarine-cable/middle-east-north-africa-mena-cable-systemgulf-bridge-international"
+								id="ember296" class="ember-view">Middle East North Africa (MENA) Cable System/Gulf Bridge International</a>
+						</li>
+						
+
+					</ul>
+				</div>
+			<div class="clearfix"></div>
+
+			</div>
+			{{! -- <div class="modal-footer">
+			</div> -- }}
+		</div>
+
+	</div>
+</div>
+
+
+{{! Custom Script }}
+
+<script>
+
+	window.onload = function () {
+		setTimeout(function () {
+			jQuery(location).attr('href', `#/country/oman`);
+		}, 100);
+
+		jQuery("#content").removeClass("show");
+	}
+
+	$(".cables-list ul li").on("click", function (e) {
+		$(".od .close").click();
+	});
+
+	// Hamburger Menu open/close
+	$('.menu-icn').on('click', function (e) {
+		e.preventDefault();
+		$('#side_bar').addClass("open");
+		$(this).addClass("hide");
+		$('.fltr-icn').addClass('hide');
+		$(".click-arrow").removeClass("hide");
+		$('.relod-icn').hide();
+	});
+
+	// Search box close arrow
+	$('.click-arrow').on('click', function (e) {
+		e.preventDefault();
+		$('#side_bar').removeClass("open");
+		$(this).addClass("hide");
+		$(".menu-icn").removeClass("hide");
+		$('.fltr-icn').removeClass('hide');
+		$('.relod-icn').show();
+	});
+
+	// Filter box open/close
+	$('.fltr-icn').on('click', function (e) {
+		e.preventDefault();
+		$('#filter-box').addClass("open");
+		$(this).addClass("hide");
+		$('.menu-icn').addClass('hide');
+		$(".fltr-close").removeClass("hide");
+		$('.relod-icn').hide();
+	});
+
+	// Filter box close arrow
+	$('.fltr-close').on('click', function (e) {
+		e.preventDefault();
+		$('#filter-box').removeClass("open");
+		$(this).addClass("hide");
+		$(".fltr-icn").removeClass("hide");
+		$('.menu-icn').removeClass('hide');
+		$('.relod-icn').show();
+	});
+
+	// Reload button
+	$('.relod-icn').on('click', function (e) {
+		jQuery(location).attr('href', `#/country/oman`);
+		jQuery("#content").removeClass("show");
+		$(".gm-ui-hover-effect").click();
+	});
+
+	function hideInfoBox(id) {
+		var infoboxId = '#' + id;
+		if ($(infoboxId).is(':visible')) {
+			$(infoboxId).hide();
+			$(".click-arrow").click();
+			$(".fltr-close").click();
+			$(".relod-icn").click();
+			//console.log('is shown and hiding');
+		}
+		else {
+			$(infoboxId).show();
+			//.log('is hidden and showing');
+		}
+	}
+
+</script>
