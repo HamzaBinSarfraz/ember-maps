@@ -52,6 +52,6 @@
     "coffeescript": "^2.3.2",
     "ember-cli-html-minifier": "^1.0.0",
     "jquery-ui-dist": "^1.12.1",
-    "yarn": "^1.15.2"
+    "yarn": "^1.22.0"
   }
 }
